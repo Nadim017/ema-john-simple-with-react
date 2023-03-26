@@ -1,0 +1,9 @@
+.header {
+  height: 80px;
+  background: #1c2b35;
+  padding-left: 100px;
+  padding-right: 90px;
+}
+.header nav a:hover {
+  color: orange;
+}
