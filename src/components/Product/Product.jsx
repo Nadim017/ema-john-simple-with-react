@@ -6,7 +6,7 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 const Product = (props) => {
   const { id, quantity, name, img, price, ratings, seller } = props.product;
   const handleToCart = props.handleToCart;
-  console.log(props.product);
+
   return (
     <div>
       <div className="card h-[508px] w-[300px]  glass">
