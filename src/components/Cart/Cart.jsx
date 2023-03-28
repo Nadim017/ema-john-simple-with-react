@@ -27,7 +27,7 @@ const Cart = ({ cart }) => {
     <div className="cart">
       <h4 className="mb-5 font-semibold text-2xl">Order Summary :</h4>
       <p className="mb-2">Selected items : {quantity}</p>
-      <p className="mb-2">totalPrice Price: ${totalPrice}</p>
+      <p className="mb-2">total Price : ${totalPrice}</p>
       <p className="mb-2">Total Shipping Charge: ${totalShipping}</p>
       <p className="mb-2">Tax: ${tax.toFixed(2)}</p>
       <h4 className="mb-5 text-lg font-bold">

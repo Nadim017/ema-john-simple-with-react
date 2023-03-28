@@ -29,7 +29,6 @@ const Shop = () => {
 
       // step 5 : set the cart
       setCart(savedCart);
-      console.log(addedProduct);
     }
   }, [products]);
   const handleToCart = (product) => {
