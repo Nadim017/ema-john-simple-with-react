@@ -4,3 +4,19 @@
   position: sticky;
   top: 0;
 }
+.clear_cart_btn {
+  background: #ff3030;
+  border-radius: 4px;
+  width: 232px;
+
+  height: 48px;
+  color: white;
+}
+.review_order_btn {
+  background: #ff9900;
+  border-radius: 4px;
+  color: white;
+  width: 232px;
+  margin-top: 15px;
+  height: 48px;
+}
