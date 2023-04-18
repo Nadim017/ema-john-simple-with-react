@@ -29,7 +29,7 @@ const SignUp = () => {
       })
       .catch((err) => {
         console.error(err);
-        setError(error.message);
+        setError('Already existed');
       });
   };
   return (

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { AuthContext } from '../Provider/AuthProvider';
 
@@ -8,6 +8,10 @@ const Login = () => {
   const [success, setSuccess] = useState('');
   const [user, setUser] = useState('');
   const { signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
+  const from = location.state?.from?.pathname || '/';
   const handleLogin = (event) => {
     event.preventDefault();
     setSuccess('');
@@ -22,6 +26,7 @@ const Login = () => {
         setSuccess('Login successful');
         setUser(logged);
         form.reset();
+        navigate(from, { replace: true });
       })
       .catch((err) => {
         console.error(err);
