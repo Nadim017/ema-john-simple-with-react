@@ -7,6 +7,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 const Login = () => {
   const [success, setSuccess] = useState('');
   const [user, setUser] = useState('');
+  const [show, setShow] = useState(false);
   const { signIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -56,11 +57,20 @@ const Login = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input
-                  type="password"
+                  type={show ? 'text' : 'password'}
                   placeholder="password"
                   className="input input-bordered"
                   name="password"
                 />
+                <p onClick={() => setShow(!show)}>
+                  <small>
+                    {show ? (
+                      <span>Hide password</span>
+                    ) : (
+                      <span>Show password</span>
+                    )}
+                  </small>
+                </p>
               </div>
               {user && <span>{success}</span>}
               <div className="form-control mt-6">
